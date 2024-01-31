@@ -61,8 +61,8 @@ var_dump($loisirs);
     <?php
 
 
-    $trucs = array("apple", 5, "orange");
-    var_dump($trucs);
+    $test = array("apple", 5, "orange");
+    var_dump($test);
     ?>
     </pre>
 
@@ -77,9 +77,9 @@ var_dump($loisirs);
 
 
     // $trucs = array(
-    //     0=>"apple", 
-    //     1=>5, 
-    //     2=>"orange"
+    //     '0'=>'apple', 
+    //     '1'=>5, 
+    //     '2'=>'orange'
     // );
     
     // function dump($trucs) {
@@ -88,8 +88,7 @@ var_dump($loisirs);
     // }
 
 
-    $trucs = array("apple", 5, "orange");
-
+    $trucs = array("apple", 5, false);
     function dump($trucs) {
         foreach ($trucs as $truc);
         echo 'array'. $truc. '{'. '<br/>'. $truc.'=>'. '<br/>'. gettype($truc). "$truc";
