@@ -51,13 +51,7 @@ var_dump($loisirs);
 
 
 
-
-
-
-    <h2>ma fonction</h2>
-
-
-
+    <h2>ma fonction var_dump</h2>
 
 
 
@@ -66,30 +60,23 @@ var_dump($loisirs);
     <?php
 
 
-    // $test = array("apple", 5, "orange");
-    // var_dump($test);
-
+    $test = array("apple", 5, false, "poires");
+    var_dump($test);
+    echo '</pre><br/><h2>ma fonction</h2><pre>';
 
     // Créer une fonction qui va faire exactement la même chose que le var_dump
 
+    $trucs = array("apple", 5, false, "poires");
 
-    // $trucs = array(
-    //     '0'=>'apple', 
-    //     '1'=>5, 
-    //     '2'=>'orange'
-    // );
-    
-    // function dump($trucs) {
-    //     foreach ($trucs as $truc => $value)
-    //         echo 'array', $truc, '{', '<br/>', $value,'=>', '<br/>', gettype($value);
-    // }
+    function dump($trucs)
+    {
+        foreach ($trucs as $truc => $value)
+            echo  '[',$truc,']=>', '<br/>', gettype($value),'"',$value,'" <br/>';
+    }
+    //count!!!
+    dump($trucs);
 
 
-    $trucs = array('apple', 5, false);
-    function dump($trucs) {
-        foreach ($trucs as $truc);
-        echo 'array'. $truc. '{'. '<br/>'. $truc.'=>'. '<br/>'. gettype($truc);
-    };
 
 
     ?>
