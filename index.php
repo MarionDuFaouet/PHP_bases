@@ -71,7 +71,7 @@ var_dump($loisirs);
     function dump($trucs)
     {
         foreach ($trucs as $truc => $value)
-            echo  '[',$truc,']=>', '<br/>', gettype($value),'"',$value,'" <br/>';
+            echo  '[',$truc,']=>', '<br/>', gettype($value),'(', strlen($value),')"',$value,'" <br/>';
     }
     //count!!!
     dump($trucs);
