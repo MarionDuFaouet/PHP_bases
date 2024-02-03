@@ -51,7 +51,7 @@ var_dump($loisirs);
 
 
 
-    <h2>ma fonction var_dump</h2>
+    <h2>test var_dump</h2>
 
 
 
@@ -61,8 +61,9 @@ var_dump($loisirs);
 
 
     $test = array("apple", 5, false, "poires");
+    // note : var_dump est la commande magique pour débuguer
     var_dump($test);
-    echo '</pre><br/><h2>ma fonction</h2><pre>';
+    echo '</pre><br/><h2>ma fonction pseudo var_dump</h2><pre>';
 
     // Créer une fonction qui va faire exactement la même chose que le var_dump
 
@@ -70,14 +71,17 @@ var_dump($loisirs);
 
     function dump($trucs)
     {
-        echo 'array(',count($trucs),'){';
+        echo 'array(',count($trucs),') {';
         foreach ($trucs as $truc => $value){
             echo '<br/>[',$truc,']=>', '<br/>', gettype($value),'(', strlen($value),') "',$value,'"';
         }
         echo '<br/>}';
     }
-    //count!!!
     dump($trucs);
+
+    // Correction Thierry
+
+
 
 
 
